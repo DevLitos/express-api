@@ -1,5 +1,3 @@
-import { logger } from './middlewares/logger.js'
-
 export const getUser = (req, res) => {
   res.json({
     status: 'success',
@@ -12,19 +10,12 @@ export const createUser = (req, res) => {
   res.status(201).json('usuario creado')
 }
 
-export const actUser =
-  ('/:id',
-  logger,
-  (req, res) => {
-    console.log(req.params.id)
-    res.json('Usuario actualizado')
-  })
+export const actUser = (req, res) => {
+  console.log(req.params.id)
+  res.json('Usuario actualizado')
+}
 
-export const delUser =
-  ('/:id',
-  logger,
-  (req, res) => {
-    console.log(req.params.id)
-
-    res.json('Usuario eliminado')
-  })
+export const delUser = (req, res) => {
+  console.log(req.params.id)
+  res.json('Usuario eliminado')
+}
