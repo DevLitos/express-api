@@ -30,13 +30,12 @@ app.use('/', router)
 dbConnection()
   .then(() => {
     console.log('Conexión a la base de datos establecida')
+    app.listen(PORT, () => {
+      console.log(`Server is r diunning on port ${PORT}`)
+    })
   })
   .catch((error) => {
     console.error('Error al conectar a la base de datos:', error)
   })
 
-executeEvery5Minutes()
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`)
-})
+//executeEvery5Minutes()
