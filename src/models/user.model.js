@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+      select: false, // Esto evita que la contraseña se devuelva en las consultas por defecto
     },
   },
   { timestamps: true }

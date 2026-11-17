@@ -6,16 +6,13 @@ export const getUser = (req, res) => {
 }
 
 export const createUser = (req, res) => {
-  console.log(req.body)
   res.status(201).json('usuario creado')
 }
 
 export const actUser = (req, res) => {
-  console.log(req.params.id)
   res.json('Usuario actualizado')
 }
 
 export const delUser = (req, res) => {
-  console.log(req.params.id)
   res.json('Usuario eliminado')
 }
