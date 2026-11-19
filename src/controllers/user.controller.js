@@ -29,3 +29,9 @@ export const delUser = (req, res) => {
   const user = User.deleteOne(id)
   res.json(user)
 }
+
+// Devuelve el perfil del usuario autenticado.
+export const getUserProfile = async (req, res) => {
+  const user = await User.find({ email: req.user.email })
+  res.json(user)
+}
